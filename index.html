@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pizzeria Sole Luna — Pizza Artigianale</title>
+
+  <meta name="description"
+    content="Pizzeria Sole Luna — Pizza artigianale cotta nel forno a legna. Sole e Luna, il sapore che non tramonta. / Artisanal wood-fired pizza. Where the Sun meets the Moon." />
+  <meta property="og:title" content="Pizzeria Sole Luna" />
+  <meta property="og:description"
+    content="Pizza artigianale cotta nel forno a legna. Sole e Luna, il sapore che non tramonta." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/logo.jpg" />
+  <link rel="icon" type="image/jpeg" href="assets/images/logo.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       HEADER / NAVBAR
+       ========================================================================= -->
+  <header id="site-header" class="site-header">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Brand Logo & Title -->
+        <a href="#top" class="brand-link focus-gold" aria-label="Pizzeria Sole Luna">
+          <span class="brand-logo-wrap orbit-ring">
+            <img src="assets/images/logo.jpg" alt="Sole Luna" class="brand-logo-img" width="36" height="36" />
+          </span>
+          <span>Sole Luna</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="nav-links-desktop">
+          <a href="#identity" class="nav-link focus-gold" data-i18n="nav.identity">Identità</a>
+          <a href="#menu" class="nav-link focus-gold" data-i18n="nav.menu">Menù</a>
+          <a href="#gallery" class="nav-link focus-gold" data-i18n="nav.gallery">Galleria</a>
+          <a href="#location" class="nav-link focus-gold" data-i18n="nav.location">Dove Siamo</a>
+          <a href="#contact" class="nav-link focus-gold" data-i18n="nav.contact">Contatti</a>
+        </div>
+
+        <!-- Header Actions: Lang, Theme, Quick Call, Mobile Burger -->
+        <div class="nav-actions">
+          <!-- Language Switcher -->
+          <button type="button" id="btn-lang" class="btn-lang focus-gold" aria-label="Switch language">ITA</button>
+
+          <!-- Theme Switcher -->
+          <button type="button" id="btn-theme" class="btn-theme focus-gold" aria-label="Attiva modalità notturna">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </button>
+
+          <!-- Call CTA Button -->
+          <a href="tel:+393514759442" class="btn-call-header focus-gold" data-i18n-aria="common.callAria">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span data-i18n="hero.ctaCall">Chiama ora</span>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button type="button" id="btn-burger" class="btn-burger focus-gold" aria-label="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobile-drawer" class="mobile-menu-drawer">
+        <div class="mobile-menu-content">
+          <a href="#identity" class="mobile-nav-link" data-i18n="nav.identity">Identità</a>
+          <a href="#menu" class="mobile-nav-link" data-i18n="nav.menu">Menù</a>
+          <a href="#gallery" class="mobile-nav-link" data-i18n="nav.gallery">Galleria</a>
+          <a href="#location" class="mobile-nav-link" data-i18n="nav.location">Dove Siamo</a>
+          <a href="#contact" class="mobile-nav-link" data-i18n="nav.contact">Contatti</a>
+          <a href="tel:+393514759442" class="mobile-btn-call" data-i18n-aria="common.callAria">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span data-i18n="hero.ctaCall">Chiama ora</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         1. HERO SECTION
+         ========================================================================= -->
+    <section id="top" class="hero-section">
+      <!-- Cosmic Background Effects -->
+      <div class="hero-backdrop">
+        <div class="hero-gradient-base"></div>
+        <div class="hero-glow-gold animate-glow-pulse"></div>
+        <div class="hero-glow-purple"></div>
+        <div class="hero-dot-grid"></div>
+      </div>
+
+      <!-- Celestial Orbit Rings -->
+      <div class="hero-orbit-center">
+        <div class="orbit-ring hero-orbit-1 animate-spin-slow"></div>
+        <div class="orbit-ring hero-orbit-2"></div>
+      </div>
+
+      <!-- Hero Main Content -->
+      <div class="container">
+        <div class="hero-content">
+          <p class="hero-kicker" data-i18n="hero.kicker">Pizza d'asporto artigianale</p>
+
+          <div class="hero-logo-wrapper">
+            <div class="hero-logo-glow animate-glow-pulse"></div>
+            <img src="assets/images/logo.jpg" alt="Pizzeria Sole Luna" class="hero-logo-img animate-float-slow"
+              width="144" height="144" />
+          </div>
+
+          <h1 class="hero-title" data-i18n="hero.title">Sole Luna</h1>
+          <p class="hero-subtitle font-display" data-i18n="hero.subtitle">Il sapore che non tramonta</p>
+          <p class="hero-lead text-balance" data-i18n="hero.lead">Pizza cotta nel forno a legna, impasto a mano e
+            ingredienti freschi. Dove il calore del sole incontra la calma della luna.</p>
+
+          <div class="hero-cta-group">
+            <a href="tel:+393514759442" class="btn-hero-primary focus-gold" data-i18n-aria="common.callAria">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span><span data-i18n="hero.ctaCall">Chiama ora</span> · 351 475 9442</span>
+            </a>
+
+            <a href="https://www.google.com/maps/place/Pizzeria+d'asporto+-+SOLE+LUNA+%F0%96%A4%93%E2%98%BD/@45.6538865,10.1997243,17z/data=!3m1!4b1!4m6!3m5!1s0x47817900553418e7:0x5ab53b9f927f8ea5!8m2!3d45.6538865!4d10.2022992!16s%2Fg%2F11w9l66p3_?entry=ttu"
+              target="_blank" rel="noopener noreferrer" class="btn-hero-secondary focus-gold"
+              data-i18n-aria="common.directionsAria">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                </path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span data-i18n="hero.ctaDirections">Portami lì</span>
+            </a>
+          </div>
+
+          <a href="#identity" class="hero-scroll-link">
+            <span class="hero-scroll-text" data-i18n="hero.scroll">Scopri</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="animate-bounce">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-bottom-line"></div>
+    </section>
+
+    <!-- =========================================================================
+         2. IDENTITY / STORY SECTION
+         ========================================================================= -->
+    <section id="identity" class="section">
+      <div class="container">
+        <div class="identity-grid">
+          <!-- Text and Values -->
+          <div class="identity-text-col">
+            <p class="section-kicker" data-i18n="identity.kicker">La nostra storia</p>
+            <h2 class="section-title text-balance" data-i18n="identity.title">Il fuoco del sole, la quiete della luna
+            </h2>
+
+            <div class="identity-paragraphs">
+              <p data-i18n="identity.p1">Sole Luna nasce dalla passione per la vera pizza napoletana. Ogni impasto è
+                lavorato a mano, lasciato lievitare con calma e cotto nel forno a legna, dove il calore vivo trasforma
+                la farina in arte.</p>
+              <p data-i18n="identity.p2">Dalle mani del pizzaiolo al primo morso: pomodoro, mozzarella e basilico
+                fresco. Niente scorciatoie, solo ingredienti veri e il tempo che ci vuole.</p>
+              <p data-i18n="identity.p3">Sole e Luna insieme raccontano un ciclo — il giorno che prepara, la sera che
+                accoglie. Una pizza che sa di casa, in ogni stagione.</p>
+            </div>
+
+            <!-- Stats/Values Cards -->
+            <div class="stats-grid">
+              <div class="stat-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="stat-icon">
+                  <path
+                    d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z">
+                  </path>
+                </svg>
+                <div class="stat-label" data-i18n="identity.stat1">Forno</div>
+                <div class="stat-sub" data-i18n="identity.stat1label">a legna</div>
+              </div>
+
+              <div class="stat-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="stat-icon">
+                  <path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"></path>
+                  <path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"></path>
+                  <path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"></path>
+                  <path
+                    d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15">
+                  </path>
+                </svg>
+                <div class="stat-label" data-i18n="identity.stat2">Impasto</div>
+                <div class="stat-sub" data-i18n="identity.stat2label">a mano, 48h</div>
+              </div>
+
+              <div class="stat-card">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="stat-icon">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                </svg>
+                <div class="stat-label" data-i18n="identity.stat3">Ingredienti</div>
+                <div class="stat-sub" data-i18n="identity.stat3label">freschi e veri</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Mosaic -->
+          <div class="mosaic-grid">
+            <div class="mosaic-img-box tall">
+              <img src="assets/images/oven.jpg" alt="Pizzaiolo al forno a legna" loading="lazy" />
+            </div>
+            <div class="mosaic-img-box square">
+              <img src="assets/images/prep.jpg" alt="Mani che farciscono la pizza" loading="lazy" />
+            </div>
+            <div class="mosaic-img-box square">
+              <img src="assets/images/margherita.jpg" alt="Pizza margherita con basilico" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. MENU / SIGNATURE PIZZAS SECTION
+         ========================================================================= -->
+    <section id="menu" class="section bg-secondary-alt">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker" data-i18n="signature.kicker">Le nostre pizze</p>
+          <h2 class="section-title" data-i18n="signature.title">Le specialità della casa</h2>
+          <p class="section-subtitle" data-i18n="signature.subtitle">Cotte nel forno a legna, servite con cura. Ogni
+            pizza è un piccolo rito.</p>
+        </div>
+
+        <!-- Pizza Cards Grid -->
+        <div class="pizza-grid">
+          <!-- Margherita -->
+          <article class="pizza-card">
+            <div class="pizza-card-img-wrap">
+              <img src="assets/images/margherita.jpg" alt="Margherita" loading="lazy" />
+            </div>
+            <div class="pizza-card-body">
+              <h3 class="pizza-name" data-i18n="signature.items.0.name">Margherita</h3>
+              <p class="pizza-desc" data-i18n="signature.items.0.desc">Pomodoro, mozzarella e basilico fresco.</p>
+            </div>
+          </article>
+
+          <!-- Salsiccia e Friarielli -->
+          <article class="pizza-card">
+            <div class="pizza-card-img-wrap">
+              <img src="assets/images/salsiccia.jpg" alt="Salsiccia e Friarielli" loading="lazy" />
+            </div>
+            <div class="pizza-card-body">
+              <h3 class="pizza-name" data-i18n="signature.items.1.name">Salsiccia e Friarielli</h3>
+              <p class="pizza-desc" data-i18n="signature.items.1.desc">Salsiccia e friarielli, il classico napoletano.
+              </p>
+            </div>
+          </article>
+
+          <!-- Prosciutto e Rucola -->
+          <article class="pizza-card">
+            <div class="pizza-card-img-wrap">
+              <img src="assets/images/prosciutto.jpg" alt="Prosciutto e Rucola" loading="lazy" />
+            </div>
+            <div class="pizza-card-body">
+              <h3 class="pizza-name" data-i18n="signature.items.2.name">Prosciutto e Rucola</h3>
+              <p class="pizza-desc" data-i18n="signature.items.2.desc">Prosciutto, rucola e glassa di balsamico.</p>
+            </div>
+          </article>
+
+          <!-- Salame Piccante -->
+          <article class="pizza-card">
+            <div class="pizza-card-img-wrap">
+              <img src="assets/images/pepperoni.jpg" alt="Salame Piccante" loading="lazy" />
+            </div>
+            <div class="pizza-card-body">
+              <h3 class="pizza-name" data-i18n="signature.items.3.name">Salame Piccante</h3>
+              <p class="pizza-desc" data-i18n="signature.items.3.desc">Pomodoro, mozzarella e salame piccante.</p>
+            </div>
+          </article>
+        </div>
+
+        <p class="menu-note" data-i18n="signature.note">Senza prezzi inventati — chiedi al banco per la lista completa.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. SPECIALTIES SECTION (FRITTI & DOLCI)
+         ========================================================================= -->
+    <section class="section">
+      <div class="container">
+        <div class="specialties-header-row">
+          <div>
+            <p class="section-kicker" data-i18n="specialties.kicker">Fritti & dolci</p>
+            <h2 class="section-title" data-i18n="specialties.title">Oltre la pizza</h2>
+            <p class="section-subtitle" data-i18n="specialties.subtitle">Panzerotti, pizza fritta e un dolce per
+              chiudere in bellezza.</p>
+          </div>
+          <a href="tel:+393514759442" class="btn-hero-secondary focus-gold" data-i18n-aria="common.callAria">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span data-i18n="hero.ctaCall">Chiama ora</span>
+          </a>
+        </div>
+
+        <div class="specialties-grid">
+          <!-- Panzerotti Farciti -->
+          <article class="pizza-card">
+            <div class="pizza-card-img-wrap">
+              <img src="assets/images/panzerotti.jpg" alt="Panzerotti Farciti" loading="lazy" />
+            </div>
+            <div class="pizza-card-body">
+              <h3 class="pizza-name" data-i18n="specialties.items.0.name">Panzerotti Farciti</h3>
+              <p class="pizza-desc" data-i18n="specialties.items.0.desc">Pasta fritta farcita, calda e fragrante.</p>
+            </div>
+          </article>
+
+          <!-- Pizza Fritta -->
+          <article class="pizza-card">
+            <div class="pizza-card-img-wrap">
+              <img src="assets/images/box.jpg" alt="Pizza Fritta" loading="lazy" />
+            </div>
+            <div class="pizza-card-body">
+              <h3 class="pizza-name" data-i18n="specialties.items.1.name">Pizza Fritta</h3>
+              <p class="pizza-desc" data-i18n="specialties.items.1.desc">Con grana o bufala, come da tradizione.</p>
+            </div>
+          </article>
+
+          <!-- Tiramisù -->
+          <article class="pizza-card">
+            <div class="pizza-card-img-wrap">
+              <img src="assets/images/tiramisu.jpg" alt="Tiramisù" loading="lazy" />
+            </div>
+            <div class="pizza-card-body">
+              <h3 class="pizza-name" data-i18n="specialties.items.2.name">Tiramisù</h3>
+              <p class="pizza-desc" data-i18n="specialties.items.2.desc">Il dolce che non poteva mancare, con caffè.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. ATMOSPHERE / DIETRO IL FORNO
+         ========================================================================= -->
+    <section class="section bg-secondary-alt">
+      <div class="container">
+        <div class="atmosphere-grid">
+          <!-- Image Mosaic on Left -->
+          <div class="mosaic-grid">
+            <div class="mosaic-img-box tall">
+              <img src="assets/images/oven.jpg" alt="Il forno a legna acceso" loading="lazy" />
+            </div>
+            <div class="mosaic-img-box square">
+              <img src="assets/images/box.jpg" alt="Staff con la pizza pronta" loading="lazy" />
+            </div>
+            <div class="mosaic-img-box square">
+              <img src="assets/images/pepperoni.jpg" alt="Pizza appena sfornata" loading="lazy" />
+            </div>
+          </div>
+
+          <!-- Atmosphere Text on Right -->
+          <div>
+            <p class="section-kicker">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z">
+                </path>
+              </svg>
+              <span data-i18n="atmosphere.kicker">L'esperienza</span>
+            </p>
+            <h2 class="section-title text-balance" data-i18n="atmosphere.title">Dietro il forno</h2>
+
+            <div class="identity-paragraphs">
+              <p data-i18n="atmosphere.p1">Il pizzaiolo al lavoro, le mani infarinate, il profumo del legno che brucia.
+                Ogni pizza esce dal forno con il cornicione maculato, segno di una cottura viva.</p>
+              <p data-i18n="atmosphere.p2">Un posto vero, dove si lavora con cura e si serve con un sorriso. Take-away
+                per portare il sole e la luna a casa tua.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. GALLERY SECTION
+         ========================================================================= -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker" data-i18n="gallery.kicker">Galleria</p>
+          <h2 class="section-title" data-i18n="gallery.title">Un assaggio con gli occhi</h2>
+          <p class="section-subtitle" data-i18n="gallery.subtitle">Tutte le immagini così come sono — niente ritocchi,
+            solo la nostra cucina.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="assets/images/salsiccia.jpg" alt="Pizza salsiccia e friarielli" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/prosciutto.jpg" alt="Pizza prosciutto e rucola" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/pepperoni.jpg" alt="Pizza con salame" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/margherita.jpg" alt="Pizza margherita" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/oven.jpg" alt="Il forno a legna" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/prep.jpg" alt="Preparazione della pizza" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/box.jpg" alt="Pizza da asporto" loading="lazy" />
+          </div>
+          <div class="gallery-item">
+            <img src="assets/images/panzerotti.jpg" alt="Panzerotti e pizza fritta" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. REVIEWS SECTION
+         ========================================================================= -->
+    <section class="section reviews-section">
+      <div class="reviews-glow"></div>
+      <div class="container">
+        <div class="reviews-container">
+          <p class="section-kicker" style="color: hsl(var(--accent));" data-i18n="reviews.kicker">Recensioni</p>
+
+          <div class="reviews-stars">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="star-icon">
+              <path
+                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="star-icon">
+              <path
+                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="star-icon">
+              <path
+                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="star-icon">
+              <path
+                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="star-icon">
+              <path
+                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+            </svg>
+          </div>
+
+          <h2 class="section-title" data-i18n="reviews.title">Cosa dicono su Google</h2>
+          <p class="reviews-subtitle" data-i18n="reviews.subtitle">Le stelle dei nostri ospiti, raccolte su Google Maps.
+          </p>
+
+          <a href="https://www.google.com/maps/place/Pizzeria+d'asporto+-+SOLE+LUNA+%F0%96%A4%93%E2%98%BD/@45.6538865,10.1997243,17z/data=!3m1!4b1!4m6!3m5!1s0x47817900553418e7:0x5ab53b9f927f8ea5!8m2!3d45.6538865!4d10.2022992!16s%2Fg%2F11w9l66p3_?entry=ttu"
+            target="_blank" rel="noopener noreferrer" class="btn-reviews focus-gold"
+            data-i18n-aria="common.directionsAria">
+            <span data-i18n="reviews.cta">Leggi le recensioni</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 3h6v6"></path>
+              <path d="M10 14 21 3"></path>
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. LOCATION & HOURS SECTION
+         ========================================================================= -->
+    <section id="location" class="section">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-kicker" data-i18n="location.kicker">Dove siamo</p>
+          <h2 class="section-title" data-i18n="location.title">Vieni a trovarci</h2>
+        </div>
+
+        <div class="location-grid">
+          <!-- Google Maps Embed Iframe -->
+          <div class="map-card">
+            <iframe title="Mappa Pizzeria Sole Luna"
+              src="https://maps.google.com/maps?q=45.6538865,10.2022992&amp;z=16&amp;output=embed" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+
+          <!-- Info Cards Stack -->
+          <div class="location-info-stack">
+            <!-- Address Card -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                  </path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span class="info-card-tag" data-i18n="location.addressLabel">Indirizzo</span>
+              </div>
+              <p class="info-card-title" data-i18n="location.address">Pizzeria d'asporto Sole Luna</p>
+              <a href="https://www.google.com/maps/place/Pizzeria+d'asporto+-+SOLE+LUNA+%F0%96%A4%93%E2%98%BD/@45.6538865,10.1997243,17z/data=!3m1!4b1!4m6!3m5!1s0x47817900553418e7:0x5ab53b9f927f8ea5!8m2!3d45.6538865!4d10.2022992!16s%2Fg%2F11w9l66p3_?entry=ttu"
+                target="_blank" rel="noopener noreferrer" class="btn-directions focus-gold"
+                data-i18n-aria="common.directionsAria">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                </svg>
+                <span data-i18n="location.directions">Portami lì</span>
+              </a>
+            </div>
+
+            <!-- Hours Card -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span class="info-card-tag" data-i18n="location.hoursLabel">Orari</span>
+              </div>
+              <p class="info-card-text" data-i18n="location.hoursNote">Verifica gli orari aggiornati su Google o
+                chiamaci.</p>
+            </div>
+
+            <!-- Contacts Card -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+                <span class="info-card-tag" data-i18n="location.contactLabel">Contatti</span>
+              </div>
+              <a href="tel:+393514759442" class="phone-big-link focus-gold" data-i18n-aria="common.callAria">351 475
+                9442</a>
+              <a href="mailto:pizzeriasoleluna2024@gmail.com" class="email-link focus-gold"
+                data-i18n-aria="common.emailAria">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <span>pizzeriasoleluna2024@gmail.com</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-grid">
+        <!-- Brand & Slogan -->
+        <div>
+          <div class="brand-link" style="margin-bottom: 1rem;">
+            <img src="assets/images/logo.jpg" alt="Sole Luna" class="brand-logo-img" style="height: 3rem; width: 3rem;"
+              width="48" height="48" />
+            <span style="font-size: 1.5rem;">Sole Luna</span>
+          </div>
+          <p class="footer-tagline" data-i18n="footer.tagline">Sole e Luna — il sapore che non tramonta.</p>
+        </div>
+
+        <!-- Contact Links -->
+        <div>
+          <h3 class="footer-col-title" data-i18n="footer.contactTitle">Contatti</h3>
+          <ul class="footer-links-list">
+            <li>
+              <a href="tel:+393514759442" class="footer-link-item focus-gold" data-i18n-aria="common.callAria">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  style="color: hsl(var(--accent));">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+                <span>351 475 9442</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:pizzeriasoleluna2024@gmail.com" class="footer-link-item focus-gold"
+                data-i18n-aria="common.emailAria">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  style="color: hsl(var(--accent));">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <span>pizzeriasoleluna2024@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.google.com/maps/place/Pizzeria+d'asporto+-+SOLE+LUNA+%F0%96%A4%93%E2%98%BD/@45.6538865,10.1997243,17z/data=!3m1!4b1!4m6!3m5!1s0x47817900553418e7:0x5ab53b9f927f8ea5!8m2!3d45.6538865!4d10.2022992!16s%2Fg%2F11w9l66p3_?entry=ttu"
+                target="_blank" rel="noopener noreferrer" class="footer-link-item focus-gold"
+                data-i18n-aria="common.directionsAria">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  style="color: hsl(var(--accent));">
+                  <path
+                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                  </path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span data-i18n="location.address">Pizzeria d'asporto Sole Luna</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Links -->
+        <div>
+          <h3 class="footer-col-title" data-i18n="footer.followTitle">Seguici</h3>
+          <div class="footer-social-row">
+            <a href="https://www.instagram.com/pizzeria_sole.luna/" target="_blank" rel="noopener noreferrer"
+              class="social-btn focus-gold" data-i18n-aria="common.instagramAria">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/p/Pizzeria-SoleLuna-61564264570942/" target="_blank"
+              rel="noopener noreferrer" class="social-btn focus-gold" data-i18n-aria="common.facebookAria">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>© <span id="copyright-year">2026</span> Pizzeria Sole Luna. <span data-i18n="footer.rights">Tutti i diritti
+            riservati.</span></p>
+        <p class="footer-made-with" data-i18n="footer.madeWith">Fatto con passione, cotto nel forno a legna.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
